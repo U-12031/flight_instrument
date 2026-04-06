@@ -170,12 +170,6 @@
 						isFocused = value;
 					}
 				});
-				bt.addEventListener("blur", () => { // フォーカスされていて、そのフォーカスが外れたらfalseにする
-					const isMobileSafari = navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") === -1;
-					if(!isMobileSafari) { // Safariの場合はblurを発火させない
-						isFocused = false;
-					}
-				});
 			} else {
 				bt.addEventListener("click", () => { // モバイル版じゃなかったら直接リンクに行く
 					window.location.href = value + "/";
